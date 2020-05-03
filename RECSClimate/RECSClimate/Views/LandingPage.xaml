@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:local="clr-namespace:RECSClimate;assembly=RECSClimate" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="RECSClimate.LandingPage"
+             BackgroundColor="SteelBlue" BackgroundImageSource="LandingPageImg.png" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Margin="0,200,0,0">
+                <Image Source="logo.png" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
+                <Label VerticalOptions="Center" FontSize="Large" TextColor="PaleVioletRed" Text="RECS Climate"></Label>
+            </StackLayout>
+            <StackLayout Margin="0,200,0,0" IsVisible="True" HorizontalOptions="FillAndExpand">
+                <Button FontSize="Medium" BorderColor="Black" FlexLayout.AlignSelf="Stretch" CornerRadius="25" Text="Login" TextColor="White" BackgroundColor="#3399ff" Clicked="LoginPage"/>
+                <Button FontSize="Medium" BorderColor="Black" FlexLayout.AlignSelf="Stretch" CornerRadius="25" Text="Sign Up" TextColor="White" BackgroundColor="#3399ff" Clicked="SignUpPage"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

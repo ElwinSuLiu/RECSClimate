@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:RECSClimate;assembly=RECSClimate"
+             mc:Ignorable="d"
+             x:Class="RECSClimate.ContributorDetail">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Label HorizontalOptions="Center" TextDecorations="Underline" TextColor="Black" FontAttributes="Bold" FontSize="Large" Text="{Binding contributorName, StringFormat='{0}\&apos;s Profile'}"></Label>
+                    <Frame CornerRadius="200" Margin="0,10,0,0" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="Gray" Padding="0" IsClippedToBounds="True" WidthRequest="250" HeightRequest="250">
+                        <Image Source="{local:ImageResource RECSClimate.Images.AdamKelley.jpg}" Aspect="AspectFill"/>
+                    </Frame>
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Margin="0,20,0,0" TextColor="Black" FontAttributes="Bold" FontSize="Large" Text="{Binding contributorName, StringFormat='{0}\&apos;s Personal Information'}" TextDecorations="Underline"></Label>
+                        <Frame VerticalOptions="End" Margin="0,10,0,0" BorderColor="Gray">
+                            <StackLayout>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="Name: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorName}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="Street Address: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorAddress}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="City: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorCity}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="Zipcode: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorZipcode}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="Phone Number: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorPhoneNumber}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="Email: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorEmail}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label LineBreakMode="WordWrap">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="Black" FontAttributes="Bold" FontSize="Medium" Text="Description: "/>
+                                            <Span TextColor="Black" FontSize="Medium" Text="{Binding contributorDescription}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

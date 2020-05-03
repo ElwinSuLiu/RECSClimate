@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RECSClimate.ContributorList"
+             xmlns:local="clr-namespace:RECSClimate;assembly=RECSClimate"
+             BackgroundImageSource="LandingPageImg.png">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Contributor" Clicked="OnContributorAdded">
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="ContributorView" HasUnevenRows="True" ItemSelected="ContributorDetails">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="White">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{local:ImageResource RECSClimate.Images.SarahPassion.jpg}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label FontSize="Medium" Text="{Binding contributorName, StringFormat= 'Name: {0:N}'}"/>
+                                <Label FontSize="Medium" Text="{Binding contributorEmail, StringFormat= 'Email: {0:N}'}"/>
+                                <Button BackgroundColor="#3399ff" HorizontalOptions="End" Text="Update Information" Clicked="info_Button" CommandParameter="{Binding .}"></Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

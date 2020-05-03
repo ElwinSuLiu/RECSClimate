@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="RECSClimate.LoginPage"
+             BackgroundImageSource="LogInPageImg.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="logo.png" Margin="30" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
+                <Label VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="PaleVioletRed" Text="RECS Climate"></Label>
+            </StackLayout>
+            <Frame CornerRadius="25">
+                <StackLayout>
+                    <Label FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Text="Login" Margin="0,0,0,30"> </Label>
+                    <Label FontSize="Medium" FontAttributes="Bold" Text="Username"/>
+                    <Entry Placeholder="Username"/>
+                    <Label FontSize="Medium" FontAttributes="Bold" Text="Password"/>
+                    <Entry IsPassword="true"/>
+                    <Button FontSize="Medium" CornerRadius="25" TextColor="White" BackgroundColor="#3399ff" Text="Login" Clicked="Login"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
