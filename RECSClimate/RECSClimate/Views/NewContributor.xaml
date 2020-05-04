@@ -3,28 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:RECSClimate;assembly=RECSClimate"
              mc:Ignorable="d"
              x:Class="RECSClimate.NewContributor">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="20" VerticalOptions="StartAndExpand">
-            <Label Text="Contributor Name" />
+                <Label HorizontalOptions="Center" Text="Image" />
+                <Frame CornerRadius="100" Margin="0,10,0,0" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="Gray" Padding="0" IsClippedToBounds="True" WidthRequest="200" HeightRequest="200">
+                    <Image Source="{local:ImageResource RECSlimate.Images.BlankAvatar.jpg}" Aspect="AspectFill" HorizontalOptions="EndAndExpand" x:Name="image" WidthRequest="200" HeightRequest="200"/>
+                </Frame>
+                <Button BackgroundColor="#3399ff" TextColor="White" WidthRequest="150" HorizontalOptions="Center" Text="Add Image" Clicked="AddImage"/>
+                <Label Text="Name" />
                 <Entry Text="{Binding contributorName}" />
-                <Label Text="Contributor Image" />
-                <Button Text="Add Image" Clicked="Image"></Button>
-                <Label Text="Contributor Street Address" />
+                <Label Text="Street Address" />
                 <Entry Text="{Binding contributorAddress}" />
-                <Label Text="Contributor City" />
+                <Label Text="City" />
                 <Entry Text="{Binding contributorCity}" />
-                <Label Text="Contributor Zipcode" />
+                <Label Text="Zipcode" />
                 <Entry Text="{Binding contributorZipcode}" />
-                <Label Text="Contributor Phone Number" />
+                <Label Text="Phone Number" />
                 <Entry Text="{Binding contributorPhoneNumber}"/>
-                <Label Text="Contributor Information"/>
+                <Label Text="Information"/>
                 <Entry Text="{Binding contributorDescription}" />
-                <Label Text="Contributor Email" />
+                <Label Text="Email" />
                 <Entry Text="{Binding contributorEmail}" />
-                <Button Text="Add Contributor" Clicked="NewContributorClicked" />
+                <Button BackgroundColor="#228B22" TextColor="White" Text="Add Contributor" Clicked="NewContributorClicked" />
                 <Button Text="Cancel" Clicked="OnCancelClicked" />
             </StackLayout>
         </ScrollView>

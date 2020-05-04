@@ -15,6 +15,18 @@ namespace RECSClimate
             MainPage = new NavigationPage(new LandingPage());
         }
 
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
+        }
+
         public int ResumeContributorList { get; set; }
 
         public static ContributorDatabase ContributorDatabase
@@ -28,18 +40,6 @@ namespace RECSClimate
                 return contributordatabase;
             }
 
-        }
-
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,10 +29,17 @@ namespace RECSClimate
         {
             await Navigation.PopAsync();
         }
-
-        void Image(object sender, EventArgs e)
+        async void AddImage(object sender, EventArgs e)
         {
+            (sender as Button).IsEnabled = false;
 
+            Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
+            if (stream != null)
+            {
+                image.Source = ImageSource.FromStream(() => stream);
+            }
+
+            (sender as Button).IsEnabled = true;
         }
     }
 }

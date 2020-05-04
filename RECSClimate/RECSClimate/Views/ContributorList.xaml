@@ -19,11 +19,11 @@
                 <ViewCell>
                     <StackLayout BackgroundColor="White">
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="{local:ImageResource RECSClimate.Images.SarahPassion.jpg}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                            <Image Source="{local:ImageResource RECSClimate.Images.BlankAvatar.jpg}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
                             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                <Label FontSize="Medium" Text="{Binding contributorName, StringFormat= 'Name: {0:N}'}"/>
-                                <Label FontSize="Medium" Text="{Binding contributorEmail, StringFormat= 'Email: {0:N}'}"/>
-                                <Button BackgroundColor="#3399ff" HorizontalOptions="End" Text="Update Information" Clicked="info_Button" CommandParameter="{Binding .}"></Button>
+                                <Label FontSize="Medium" TextColor="Black" Text="{Binding contributorName, StringFormat= 'Name: {0:N}'}"/>
+                                <Label FontSize="Medium" TextColor="Black" Text="{Binding contributorEmail, StringFormat= 'Email: {0:N}'}"/>
+                                <Button BackgroundColor="#3399ff" TextColor="White" HorizontalOptions="End" Text="Update Information" Clicked="info_Button" CommandParameter="{Binding .}"></Button>
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>

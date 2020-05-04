@@ -5,16 +5,16 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image Source="logo.png" Margin="30" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
-                <Label VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="PaleVioletRed" Text="RECS Climate"></Label>
+                <Label VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" Text="RECS Climate"></Label>
             </StackLayout>
             <Frame CornerRadius="25">
                 <StackLayout>
-                    <Label FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Text="Sign Up" Margin="0,0,0,30"></Label>
-                    <Label FontSize="Medium" FontAttributes="Bold" Text="Username" />
+                    <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Text="Sign Up" Margin="0,0,0,30"></Label>
+                    <Label TextColor="Black" FontSize="Medium" FontAttributes="Bold" Text="Username" />
                     <Entry x:Name="usernameEntry" Placeholder="username" />
-                    <Label FontSize="Medium" FontAttributes="Bold" Text="Email" />
+                    <Label TextColor="Black" FontSize="Medium" FontAttributes="Bold" Text="Email" />
                     <Entry x:Name="userEmail" Placeholder="Email Address" />
-                    <Label FontSize="Medium" FontAttributes="Bold" Text="Password" />
+                    <Label TextColor="Black" FontSize="Medium" FontAttributes="Bold" Text="Password" />
                     <Entry x:Name="passwordEntry" IsPassword="true" />
                     <Button FontSize="Medium" CornerRadius="25" VerticalOptions="CenterAndExpand" TextColor="White" BackgroundColor="#3399ff" Text="Sign Up" Clicked="SignUpClicked"/>
                 </StackLayout>
