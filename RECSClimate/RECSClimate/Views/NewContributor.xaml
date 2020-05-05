@@ -16,18 +16,18 @@
                 <Button BackgroundColor="#3399ff" TextColor="White" WidthRequest="150" HorizontalOptions="Center" Text="Add Image" Clicked="AddImage"/>
                 <Label Text="Name" />
                 <Entry Text="{Binding contributorName}" />
+                <Label Text="Email" />
+                <Entry Text="{Binding contributorEmail}" />
+                <Label Text="Phone Number" />
+                <Entry Text="{Binding contributorPhoneNumber}"/>
+                <Label Text="Information"/>
+                <Entry Text="{Binding contributorDescription}" />
                 <Label Text="Street Address" />
                 <Entry Text="{Binding contributorAddress}" />
                 <Label Text="City" />
                 <Entry Text="{Binding contributorCity}" />
                 <Label Text="Zipcode" />
                 <Entry Text="{Binding contributorZipcode}" />
-                <Label Text="Phone Number" />
-                <Entry Text="{Binding contributorPhoneNumber}"/>
-                <Label Text="Information"/>
-                <Entry Text="{Binding contributorDescription}" />
-                <Label Text="Email" />
-                <Entry Text="{Binding contributorEmail}" />
                 <Button BackgroundColor="#228B22" TextColor="White" Text="Add Contributor" Clicked="NewContributorClicked" />
                 <Button Text="Cancel" Clicked="OnCancelClicked" />
             </StackLayout>
